@@ -3,6 +3,7 @@ import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import TaskCounter from "./components/TaskCounter";
 import TaskFilter from "./components/TaskFilter";
+import { Analytics } from "@vercel/analytics/react"
 import "./style.css";
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
       <TaskFilter filter={filter} setFilter={setFilter} clearTasks={clearTasks} />
       <TodoForm addTask={addTask} />
       <TodoList tasks={getFilteredTasks()} toggleComplete={toggleComplete} deleteTask={deleteTask} updateTask={updateTask} />
+      <Analytics />
     </div>
   );
 }
