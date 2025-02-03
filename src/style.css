@@ -110,3 +110,56 @@ body {
     border-radius: 10px;
   }
   
+  /* 📱 Mobile View: Max 600px di larghezza */
+@media (max-width: 600px) {
+  .todo-container {
+    width: 90%; /* Usa il 90% dello schermo invece di una larghezza fissa */
+    max-height: none; /* Rimuove il limite di altezza */
+    height: 80vh;
+    padding: 15px; /* Meno spazio intorno */
+    border-radius: 8px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .task-filter {
+    flex-direction: column; /* Metti i filtri uno sotto l'altro */
+    align-items: center;
+  }
+
+  .task-filter button {
+    width: 100%; /* Bottoni larghi per il tocco */
+    margin-bottom: 5px;
+  }
+
+  .todo-item {
+    flex-direction: column; /* Le task si impilano una sotto l'altra */
+    align-items: flex-start;
+  }
+
+  .delete-button, .edit-button {
+    width: 40px; /* Bottoni più grandi per il tocco */
+    height: 40px;
+  }
+
+  .clear-button {
+    width: 100%; /* Rende il bottone "Delete All" più grande */
+    font-size: 18px;
+  }
+
+  input[type="text"] {
+    width: 100%; /* L'input si allarga completamente */
+    font-size: 16px; /* Testo più grande */
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box; /* ✅ Assicura che padding e border non causino overflow */
+
+  }
+
+  button {
+    font-size: 16px; /* Bottoni più leggibili */
+    padding: 12px; /* Più spazio per il tocco */
+  }
+}
