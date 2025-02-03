@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url(/todo-photo.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .todo-container {
+    width: 400px; /* Imposta una larghezza */
+    max-height: 500px; /* Imposta un'altezza massima */
+    overflow-y: auto; /* Abilita lo scrolling verticale */
+    background-color: rgba(13, 12, 12, 0.62);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px; 
+}
+
+.task-filter button {
+  background-color: rgba(119, 111, 115, 0.32);
+}
+
+.task-filter button:hover {
+  background-color: pink;
+
+}
+.task-filter button:active {
+  transform: scale(0.95);
+}
+
+.clear-button:hover {
+  background-color: darkred !important;
+}
+
+.add-button:active {
+  transform: scale(0.95);
+}
+
+.add-button:hover {
+  background-color: pink;
+}
+
+.todo-item  {
+  display: flex;
+  align-items: center;  /* ✅ Allinea gli elementi verticalmente */
+  justify-content: space-between;
+  /*gap: 10px; */ /* ✅ Aggiunge spazio tra gli elementi */
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-item span {
+  flex-grow: 1;  /* ✅ Fa sì che il testo occupi tutto lo spazio disponibile */
+}
+
+.delete-button, .edit-button {
+  width: 25px;  /* ✅ Rende i bottoni della stessa dimensione */
+  height: 25px;
+  font-size: 14px;
+  padding: 3px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  gap: 10px;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+.edit-button:hover {
+  background-color: lightgreen;
+}
+
+
+
+  
+  /*div {
+    background-color: rgba(13, 12, 12, 0.62); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }*/
+  
+  input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
